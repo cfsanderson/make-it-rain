@@ -5,11 +5,31 @@ const $$ = s => document.querySelectorAll(s)
 
 const createDrops = () => {
   console.log('drops')
-  const li = document.createElement('li')
-  const figure = document.createElement('figure')
-  figure.style.backgroundImage
-  li.appendChild(figure)
-  $('ul.drops').appendChild(li)
+  const createLi = document.createElement('li')
+  const createFigure = document.createElement('figure')
+  createLi.appendChild(createFigure)
+  createFigure.className = 'newDrops'
+  $('ul.drops').appendChild(createLi)
+  const falling = () => {
+    console.log('falling')
+  }
+
+  // $('.newDrops')
+  //
+  // setInterval(() => {
+  //   box.style.top = '-50px' // moves it -50px from the top, off the page
+  //   box.style.left = '100px' // moves it left 100px
+  // }, 12000) // 12000 sets the amount of falling time
+  //
+  // const animate = () => {
+  //   box.style.top = `${parseInt(box.style.top) + 2}px` // controls the rate of fall
+  // }
+  //
+  // setInterval(animate, 16.66)
+  //
+  // setTimeout(() => {
+  //   box.style.backgroundColor = 'green'
+  // }, 5000)
 }
 
 const createFlakes = () => {
@@ -28,21 +48,22 @@ const main = () => {
   $('button.makeItSnow').addEventListener('click', createFlakes)
 }
 
-const box = $('.box1')
+const box = $('.drop1')
 
 setInterval(() => {
-  box.style.top = '0px'
-}, 1000)
+  box.style.top = '-50px' // moves it -50px from the top, off the page
+  box.style.left = '100px' // moves it left 100px should be randomized
+}, 5000) // sets the reset time
 
-const animate = () => {
-  box.style.top = `${parseInt(box.style.top) + 1}px`
+const animal = () => {
+  box.style.top = `${parseInt(box.style.top) + 2}px` // controls the rate of fall
 }
 
-setInterval(animate, 16.66)
+setInterval(animal, 16.66) // sets the interval for when we call animal again
 
 setTimeout(() => {
-  box.style.backgroundColor = 'green'
-}, 5000)
+  // box.style.backgroundColor = 'green'
+}, 1000)
 
 document.addEventListener('DOMContentLoaded', main)
 
