@@ -1,8 +1,87 @@
 html {
   text-size-adjust: 100%;
+  height: 100%;
 }
 
 body {
   margin: 0;
   font: 16px / 1 sans-serif;
+  min-height: 100%;
+  background-image: url(./images/winter-sky.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.makeItRain {
+  position: fixed;
+  bottom: 10vh;
+  left: 0;
+  width: 50vw;
+  /*border: 3px solid #73AD21;*/
+}
+
+.makeItSnow {
+  position: fixed;
+  bottom: 10vh;
+  right: 0;
+  width: 50vw;
+  /*border: 3px solid #73AD21;*/
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.drops figure {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+  height: 50px;
+  background-image: url(./images/droplet.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flakes figure {
+  position: absolute;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url(./images/snowflake.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+button {
+  font-family: 'Lato';
+  font-weight: 300;
+  color: hsl(216, 60%, 82%);
+  position: absolute;
+  font-size: 1em;
+  border-radius: 1em;
+  border-width: thin;
+  background-color: hsla(225, 20%, 37%, 0.5)
+}
+
+.box1 {
+  background-color: goldenrod;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+}
+
+.box2 {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  left: 30px;
 }
