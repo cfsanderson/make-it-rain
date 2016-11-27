@@ -34,8 +34,11 @@ ul {
   padding-left: 0;
 }
 
-.drops figure {
+.drops li {
   position: absolute;
+}
+
+.drops figure {
   margin: 0;
   width: 30px;
   height: 50px;
